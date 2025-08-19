@@ -1,4 +1,4 @@
-# Library Management System (CLI)
+# Web Development Practice (HTML, CSS, JavaScript)
 
 A repository for learning and practicing web development with HTML, CSS, and JavaScript through daily exercises and projects.
 
