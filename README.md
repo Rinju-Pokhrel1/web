@@ -30,5 +30,5 @@ This repository emphasizes **hands-on learning** and aims to serve as a referenc
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/webdev-learning.git
+   git clone https://github.com/Rinju-Pokhrel1/webdev-learning.git
    cd webdev-learning
