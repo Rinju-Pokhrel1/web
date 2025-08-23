@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+    <style>
+        /* element selector */
+        div{
+           background-color:pink;
+
+        }
+
+        /* class selector */
+        .blue{
+            background-color: blue;
+        }
+       /* id selector */
+       #purple
+       {
+        background-color: purple;               
+       }
+       /* child selector */
+       div >p{
+     
+        background-color: yellow;
+
+       }
+
+       /* descendent selector  */
+/* 
+        div p{
+          background-color: green;
+        } */
+
+        /* universal selector  */
+
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        /* pseudo selector */
+        a:visited {
+            color:yellow;
+        }
+
+        a:link{
+            color :greenyellow;
+
+        }
+        a:active 
+        {
+            background-color: red;
+
+        }
+        a:hover{
+        background-color: yellowgreen;
+      }
+
+      p:first child {
+        background-color:yellow;
+
+      }
+      
+       
+    </style>
+</head>
+<body>
+    <div> hello everyone</div>
+
+    <!-- drawback  of element selector -->
+    <!--    if we create next div then its bg color is pink -->
+        <div> This is just a sample file </div>
+
+        <div class="blue">class selector style </div>
+        <div id="purple">id selector style  </div>
+       <div>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, eos.</p>
+       </div>
+
+       <div >
+        <span >
+            <p> hello </p>
+        </span>
+       </div>
+
+       <a href="https://www.google.com/">Google </a>
+       <a href="https://www.facebook.com/">facebook</a>
+       <div>
+        <main>
+            <p> i am first child </p>
+            <p> i am second </p>
+        </main>
+       </div>
+</body>
+</html>
