@@ -1,0 +1,60 @@
+<!-- variables not only hold color it holds color,value,string. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS VARIABLE</title>
+    <style>
+        /* global variable */
+        :root{
+            --color:yellow;
+            --seccolor:pink;
+        --defpad:23px;
+        --defop:0.2;
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .nav{
+
+            background-color: var(--color);;
+            padding:10px;
+        }
+       
+        
+        .container{
+            background-color:var(--seccolor );
+        }
+        ul
+        {
+            display:flex;
+            /* padding:var(--defpad); */
+            opacity:var(--defop);
+        }
+         ul li{
+          list-style: none;
+          padding:var(--defpad);
+
+        }
+        ul li:first child{
+            --color:purple;
+            background-color: var(--color);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+    </div>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam suscipit vel ipsa impedit cum? Ut blanditiis laboriosam aperiam doloremque, quis accusamus esse culpa assumenda maiores rem facilis cum tempore tempora.</p>
+    </div>
+</body>
+</html>

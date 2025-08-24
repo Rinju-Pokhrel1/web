@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinju Pokhrel Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: #0077cc;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav ul li {
+            margin: 0 15px;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            display: none; 
+        }
+        .active {
+            display: block; 
+        }
+
+        h1 {
+            color: #0077cc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+           
+    </div>
+
+    <!-- Content Sections -->
+    <div class="content">
+        <div id="home" class="section active">
+            <h1>Welcome to Rinju Pokhrel Website</h1>
+            <p>Visit my personal site: <a href="https://rinjupokhrel.com.np" target="_blank">rinjupokhrel.com.np</a></p>
+        </div>
+
+        <div id="contact" class="section">
+            <h1>Contact</h1>
+            <p>My contact information: <a href="mailto:rinjupokhrel@gmail.com" target="_blank">rinjupokhrel@gmail.com</a></p>
+        </div>
+
+        <div id="about" class="section">
+            <h1>About Me</h1>
+            <p>This is a simple website project about me, Rinju Pokhrel.</p>
+        </div>
+
+    <script>
+        function showSection(id) {
+           
+            let sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+          
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
