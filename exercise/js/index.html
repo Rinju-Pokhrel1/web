@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise for JS</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: pink;
+      color: white;
+      font-size: 2rem;
+      font-family: sans-serif;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <div>Initializing Hacking</div>
+
+  <script>
+    // random delay function
+    const randomDelay = () => {
+      return new Promise((resolve) => {
+        const timeout = 1 + Math.floor(Math.random() * 6);
+        setTimeout(() => {
+          resolve(timeout);
+        }, timeout * 1000);
+      });
+    };
+
+    // Text
+    const text = [
+      "Initializing Hacking...",
+      "Reading",
+      "Password:",
+      "Access Granted",
+      "Hacking in progress...",
+      "Hacking complete!"
+    ];
+
+    const displayText = async () => {
+      const container = document.querySelector('div');
+
+      for (let t of text) {
+        container.innerHTML = t;
+        await randomDelay();
+      }
+    };
+//blinking effect
+    setInterval(() => {
+      let divs = document.getElementsByTagName('div');
+      let last = divs[divs.length - 1];
+
+      if (last.innerHTML.endsWith('...')) {
+        last.innerHTML = last.innerHTML.slice(0, -3);
+      } else {
+        last.innerHTML += '.';
+      }
+    }, 500);
+
+    displayText();
+  </script>
+</body>
+</html>
