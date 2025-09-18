@@ -1,0 +1,54 @@
+<!-- such that the ball moves up and down and rotate like in physics  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATION</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.container{
+   position: relative;
+   width: 80vw;
+   height: 80vh;
+   background-color: blue
+}
+.box{
+    height: 121px;
+   width:121px;
+   background-color: red;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+
+   border-radius: 75px;
+      animation: move 5s linear infinite, bounce 1s ease-in-out infinite;
+}
+
+ /* forward motion */
+    @keyframes move {
+      0%   { left: 0; }
+      100% { left: 90%; } /* moves across the screen */
+    }
+
+    /* bounce motion */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-100px); }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+      
+        </div>
+    </div>
+    
+</body>
+</html>

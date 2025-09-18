@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+    <style>
+    *{
+        margin: 0;
+        padding:0;
+    }
+    .box{
+        color:black;
+
+    }
+
+       .box1{ 
+        color:blue;
+        padding:10px;
+        margin: 25px;
+        border: 2px solid black;
+        height: 200px;
+        box-sizing:border-box;
+       }
+       
+       .box2{
+        color:purple;
+        padding:10px;
+        margin: 25px;
+        border: 2px solid black;
+        height :200px;
+
+
+       }
+    /* margin collapse  */
+    /* box 1 margin :25px and 
+    second is also :25px 
+    since total margin in between
+     box 1 and 2 is 50px  */
+   /* in this case by default  max margin is used */
+    .box3{
+        color:purple;
+        padding:10px;
+        margin: 50px;
+        border: 2px solid black;
+        height :200px;
+    }
+   </style>
+</head>
+<body>
+    <div class="box box1"> this is first box </div>
+    <div class="box box2"> this is second box </div>
+    <div class="box box3"> this is third box </div>
+
+
+</body>
+</html>

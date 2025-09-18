@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLOAT AND CLEAR</title>
+    <style>
+        body{
+             background-color: pink;
+        }
+    .cards{
+        border:2px solid black;
+    }
+    /* }  overflow control */
+     img{
+        display:flow-root;  
+        float:left;
+        margin:50px;
+
+     }
+     card{
+        border:2px solid pink;
+       
+
+     }
+     card:nth-child(3)
+     {
+        background-color: aqua;
+        clear:right;
+     }
+    </style>
+
+</head>
+
+<body>
+    <div class="cards">
+        <img src="sarswati.jpg"
+        alt="no content" width="230px">
+        <div class="card">
+            <p>
+                What is Saraswati the goddess of?
+                <br><br>
+                Saraswati is the Hindu goddess of knowledge. She is associated with wisdom, music, art, and learning.
+                She is one of the three main goddesses of Hinduism, along with Lakshmi and Parvati. Together the three
+                goddesses are called the Tridevi.
+            </p>
+
+            <div class="card"></div>
+            <p>
+                Saraswati Mata, pure and bright,
+                Bless us all with wisdom’s light.
+                With veena’s song so calm and sweet,
+                Knowledge blooms at your holy feet.
+            </p>
+            <div class="card"></div>
+        </div>
+</body>
+
+</html>
