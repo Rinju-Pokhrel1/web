@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inserting & Removing Elements in JS</title>
+  <style>
+    .container {
+      display: flex;
+      gap: 10px;
+    }
+    .box {
+      padding: 10px;
+      background: lightblue;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Hello (original)</div>
+  </div>
+
+  <button onclick="addBox()">Add Box</button>
+  <button onclick="removeBox()"> Remove Box</button>
+
+  <script>
+    let container = document.querySelector(".container");
+
+    // Insert new element
+    function addBox() {
+      let newBox = document.createElement("div");
+      newBox.className = "box";
+      newBox.textContent = "New Box " + (container.children.length + 1);
+      container.appendChild(newBox); // adds at the end
+    }
+
+    // Remove last element
+    function removeBox() {
+      if (container.lastElementChild) {
+        container.removeChild(container.lastElementChild);
+      }
+    }
+  </script>
+</body>
+</html>

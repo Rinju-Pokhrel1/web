@@ -1,0 +1,5 @@
+Here to overcome the limitation of the limited capacity express js is used .
+install:
+npm init --y to create package json file directly 
+nodemon main.js to run the main.js file
+npm i express@4 install v 4 of express 

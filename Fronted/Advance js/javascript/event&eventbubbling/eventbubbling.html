@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling</title>
+  <style>
+    .child {
+      border: 1px solid black;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="childcontainer">
+      <div class="child">
+        I am a child. Do you want to see event bubbling?
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add single event listener to child
+    document.querySelector('.child').addEventListener('click', (e) => {
+   
+      // e.stopPropagation();
+      alert("You clicked on child");
+    });
+
+    // Event listener for childcontainer
+    document.querySelector('.childcontainer').addEventListener('click', () => {
+      alert("You clicked on childcontainer");
+    });
+
+    // Event listener for container
+    document.querySelector('.container').addEventListener('click', () => {
+      alert("You clicked on container");
+    });
+
+    // Function to generate random colors
+    function getRandomColor() {
+      let val1 = Math.ceil(Math.random() * 255);
+      let val2 = Math.ceil(Math.random() * 255);
+      let val3 = Math.ceil(Math.random() * 255);
+      return `rgb(${val1}, ${val2}, ${val3})`;
+    }
+
+    // Change child background color every 2 seconds
+    setInterval(() => {
+      document.querySelector('.child').style.background = getRandomColor();
+    }, 2000);
+  </script>
+</body>
+</html>
