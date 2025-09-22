@@ -1,3 +1,9 @@
 {
-    "livePreview.defaultPreviewPath": "/js/javascript/event&eventbubbling/index.html"
+    "livePreview.defaultPreviewPath": "/js/javascript/event&eventbubbling/index.html",
+    "mdb.presetConnections": [
+        {
+            "name": "Preset Connection",
+            "connectionString": "mongodb://localhost:27017"
+        }
+    ]
 }
