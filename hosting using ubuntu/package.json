@@ -1,0 +1,15 @@
+{
+  "name": "hosting-using-ubuntu",
+  "version": "1.0.0",
+  "description": "### Step 1:installing node js curl -fsSL https://deb.nodesource.com/setup_21.x -o nodesource_setup.sh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
