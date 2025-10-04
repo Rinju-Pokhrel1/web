@@ -1,4 +1,4 @@
-# Web Development Learning Course  
+## Web Development Learning Course  
 
 This repository documents my journey of learning **Web Development**.  
 It contains practice exercises, notes, and examples focused on building a strong foundation in **HTML** and **CSS**.  
