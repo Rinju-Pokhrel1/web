@@ -1,18 +1,17 @@
-// import { useState, useEffect } from "react";
-import fs from "fs/promises"
-import Navbar from "@/components/Navbar"
+"use client";
+
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
-  // const [count, setCount] = useState(0)
-  console.log("Hey I am harry")
-  let a = fs.readFile(".gitignore")
-  a.then(e=>{console.log(e.toString())})
+  const [count, setCount] = useState(0);
+
   return (
-   <div>
-    <Navbar/>
-    I am a component 
-    {/* {count} */}
-    {/* <button onClick={()=> setCount(count + 1)}>Click me</button> */}
-   </div>
+    <div>
+      <Navbar />
+      <p>I am a client component</p>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
   );
 }
