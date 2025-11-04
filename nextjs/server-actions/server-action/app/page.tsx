@@ -13,7 +13,7 @@ export default function Home() {
           <label htmlFor="add">Address</label>
           <input name="add" id="add" required />
         </div>
-        <button type="submit">Submit </button>
+        <button type="submit"> Submit </button>
       </form>
     </div>
   )
