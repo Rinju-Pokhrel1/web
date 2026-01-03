@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Generator </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: green;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 100%;
+        }
+
+        .container {
+            margin: 50px auto;
+            padding: 200px;
+            background-color: white;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        input[type="number"] {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: yellowgreen;
+            color: black;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .result,
+        #wt_guide {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">Home </a>
+    </nav>
+    <div class="container">
+        <h1>BMI Generator</h1>
+        <form>
+            <p>
+                <label>
+                    <h2>Height in cm</h2>
+                </label>
+                <input type="number" id="height" />
+                <label>
+                    <h2>Weight in kg</h2>
+                </label>
+                <input type="number" id="weight" />
+                <button> calculateBmi</button>
+
+            </p>
+            <div class="result"></div>
+            <div id="wt_guide">
+
+                <h3>BMI WT GUIDE</h3>
+                <p> Underweight = 18.5, Normal = 18.5-24.9, Overweight = 25-29.9, Obese = 30+
+                </p>
+            </div>
+
+        </form>
+    </div>
+</body>
+<script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const height = parseFloat(document.getElementById('height').value);
+        const weight = parseFloat(document.getElementById('weight').value);
+        const result = document.querySelector('.result');
+        if (height === '' || height < 0 || isNaN(height)) {
+            result.innerHTML = `Please enter a valid height ${height}`;
+        }
+        else if (weight === '' || weight < 0 || isNaN(weight)) {
+            result.innerHTML = `Please enter a valid weight ${weight}`;
+        }
+        else {
+            calculateBMI = weight / ((height * height) / 10000).toFixed(2);
+            result.innerHTML = `<span>${calculateBMI}</span>`;
+        }
+        if (calculateBMI< 18.5) {
+            result.innerHTML = `Your BMI is ${calculateBMI}. You are Underweight.`;
+        }
+        else if (calculateBMI >= 18.5 && calculateBMI < 25) {
+            result.innerHTML = `Your BMI is ${calculateBMI}. You are Normal.`;
+        }
+        else if (calculateBMI >= 25 && calculateBMI < 30) {
+            result.innerHTML = `Your BMI is ${calculateBMI}. You are Overweight.`;
+        }
+        else {
+            result.innerHTML = `Your BMI is ${calculateBMI}. You are Obese.`;
+        }
+    });
+
+
+</script>
+
+</html>
