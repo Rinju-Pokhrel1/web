@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinju Pokhrel</title>
+</head>
+<body>
+    <h1>Rinju Pokhrel</h1>
+    <button id="stop">Stop after 5 seconds</button>
+</body>
+<script> 
+    const sayRinju = function(){
+        console.log("Rinju pokhrel");
+    }
+    setTimeout(sayRinju, 2000);
+
+    const changedoc =function(){
+        document.querySelector("h1").innerHTML="Hello Rinju Pokhrel";
+    }
+    setTimeout(changedoc,3000);
+
+    //to stop after 5 seconds
+    document.getElementById("stop").addEventListener("click", function(){
+        clearTimeout(sayRinju);
+        clearTimeout(changedoc);    
+        console.log("Timeouts cleared");
+    });
+
+</script>
+</html>
+
+
+//setTimeout() - to run a function after a certain amount of time
+//clearTimeout() - to stop a timeout before it executes
+setInterval() - to run a function repeatedly at specified intervals
+clearInterval() - to stop a setInterval before it continues
