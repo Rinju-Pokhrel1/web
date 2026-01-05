@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Color</title>
+</head>
+
+<body>
+    <h1>Unlimited Color Changer</h1>
+    <button id="start">Start Color Change</button>
+    <button id="stop">Stop Color Change</button>
+</body>
+<script>
+    let intervalId = null;  
+
+    const randomColor = function () {  
+        const Hex = "0123456789ABCDEF";  
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += Hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    };
+
+    const startchangingcolor = function () {
+        if (intervalId) return;  
+        intervalId = setInterval(changeBgcolor, 1000);  
+        function changeBgcolor() {
+            document.body.style.backgroundColor = randomColor();  
+        }
+    };
+
+    const stopchangingcolor = function () {
+        if (intervalId) {
+            clearInterval(intervalId);  
+            intervalId = null;
+        }
+    };
+
+    document.getElementById("start").addEventListener("click", startchangingcolor); 
+    document.getElementById("stop").addEventListener("click", stopchangingcolor);    
+</script>
+
+</html>
